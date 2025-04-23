@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS games_2024 (game_date VARCHAR(10), day_of_week CHAR(3), visiting_team VARCHAR(3), visiting_game_number INT, home_team VARCHAR(3), home_game_number INT, visiting_score TINYINT, home_score TINYINT, total_outs INT, day_night CHAR(1), park_id VARCHAR(10), attendance INT, game_length_minutes INT, visiting_line_score VARCHAR(20), home_line_score VARCHAR(20))

@@ -17,8 +17,40 @@ for row in cursor.fetchall():
         home_result = 'L'
         visiting_result = 'W'
     
-    insert_list.append((row['game_date'], row['day_of_week'], row['home_team'], 'H', row['home_game_number'], row['visiting_team'], row['visiting_game_number'], home_result, row['home_score'], row['visiting_score'], row['total_outs'], row['day_night'], row['park_id'], row['attendance'], row['game_length_minutes'], row['home_line_score'], row['visiting_line_score']))
-    insert_list.append((row['game_date'], row['day_of_week'], row['visiting_team'], 'A', row['visiting_game_number'], row['home_team'], row['home_game_number'], visiting_result, row['visiting_score'], row['home_score'], row['total_outs'], row['day_night'], row['park_id'], row['attendance'], row['game_length_minutes'], row['home_line_score'], row['visiting_line_score']))
+    insert_list.append((row['game_date'], 
+                        row['day_of_week'], 
+                        row['home_team'], 
+                        'H', 
+                        row['home_game_number'], 
+                        row['visiting_team'], 
+                        row['visiting_game_number'], 
+                        home_result, 
+                        row['home_score'], 
+                        row['visiting_score'], 
+                        row['total_outs'], 
+                        row['day_night'], 
+                        row['park_id'], 
+                        row['attendance'], 
+                        row['game_length_minutes'], 
+                        row['home_line_score'], 
+                        row['visiting_line_score']))
+    insert_list.append((row['game_date'], 
+                        row['day_of_week'], 
+                        row['visiting_team'], 
+                        'A', 
+                        row['visiting_game_number'], 
+                        row['home_team'], 
+                        row['home_game_number'], 
+                        visiting_result, 
+                        row['visiting_score'], 
+                        row['home_score'], 
+                        row['total_outs'], 
+                        row['day_night'], 
+                        row['park_id'], 
+                        row['attendance'], 
+                        row['game_length_minutes'], 
+                        row['home_line_score'], 
+                        row['visiting_line_score']))
 
 # load into database
 

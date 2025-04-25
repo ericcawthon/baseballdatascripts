@@ -1,1 +1,18 @@
-CREATE TABLE IF NOT EXISTS  games_by_team_2024 (game_date VARCHAR(10), day_of_week CHAR(3), team VARCHAR(3), home_away CHAR(1), game_number INT, opponent VARCHAR(3), opponent_game_number INT, result CHAR(1), runs_scored TINYINT, runs_allowed TINYINT, total_outs INT, day_night CHAR(1), park_id VARCHAR(10), attendance INT, game_length_minutes INT, team_line_score VARCHAR(20), opponent_line_score VARCHAR(20))
+CREATE TABLE IF NOT EXISTS  games_by_team_2024 
+(game_date VARCHAR(10), 
+day_of_week CHAR(3), 
+team VARCHAR(3), 
+home_away CHAR(1), 
+game_number INT, 
+opponent VARCHAR(3), 
+opponent_game_number INT, 
+result CHAR(1), 
+runs_scored TINYINT, 
+runs_allowed TINYINT, 
+total_outs INT, 
+day_night CHAR(1), 
+park_id VARCHAR(10), 
+attendance INT, 
+game_length_minutes INT, 
+team_line_score VARCHAR(20), 
+opponent_line_score VARCHAR(20))

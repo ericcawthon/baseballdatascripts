@@ -149,6 +149,25 @@ with open('rawdata/gl2024.txt', newline='') as file:
     for row in reader:
         sql = sql + f" ('{row[0]}', '{row[2]}', '{row[3]}', {row[5]}, '{row[6]}', {row[8]}, {row[9]}, {row[10]}, {row[11]}, '{row[12]}', '{row[16]}', {row[17]}, {row[18]}, '{row[19]}', '{row[20]}'),"
 
+'''
+ABOVE:
+0 = date ex. STRING 2024-04-01
+2 = day of week STRING ex. Mon, Wed
+3 = visting team STRING ex. SLN, NYA
+5 = visiting team game number INTEGER 1 - 163
+6 = home team STRING ex. SLN, NYA
+8 = home team game number INTEGER  1 - 163
+9 = visiting team score INTEGER 0 - 30
+10 = home team score INTEGER 0 - 30
+11 - total outs INTEGER 51+
+12 = day_night STRING ex. D, N
+16=. Park id STRING ex. LOS03, STP01
+17 = attendance INTEGER max 5 digits
+18 = game_time_minutes INTEGER 3 digits
+19 = visiting team line score STRING ex. 010000(10)0
+20 = home team line score STRING ex. 010000(10)0x
+'''
+
 current_timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 with open("outputfiles/" + current_timestamp +  ".txt", "w") as file:
     file.write(sql)

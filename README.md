@@ -5,3 +5,6 @@
 - added files with the CREATE TABLE statements for both tables
 
 ---
+## Friday, April 25th
+- logic to evaluate and store W/L result for each games_by_team entry
+---

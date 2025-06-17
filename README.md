@@ -1,5 +1,9 @@
 # baseballdatascripts
 ---
+## Tuesday, June 217th
+- created `aggregate_series_data.py` to aggregate game logs into series level data
+- added `create_series_by_team.sql` with CREATE TABLE statements for table to store this seris level data
+---
 ## Friday, April 25th
 - logic to evaluate and store W/L result for each games_by_team entry
 ---

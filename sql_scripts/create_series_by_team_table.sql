@@ -1,0 +1,20 @@
+-- team, series nubmer, opponent, home_away,  series start date, series end date, series outcome (W/L/T), series length, runs_scored, 
+-- runs_allowed, attendance_toal, attendance_average, game_length_minutes_total, game_length_minutes_average
+CREATE TABLE IF NOT EXISTS series_by_team_2024 
+(team VARCHAR(3), 
+series_number INT, 
+opponent VARCHAR(3), 
+home_away CHAR(1),
+series_start_date varchar(10),
+series_end_date varchar(10),
+games_dow VARCHAR(40),
+series_result CHAR(1), 
+wins INT,
+losses INT,
+series_length INT,
+runs_scored TINYINT, 
+runs_allowed TINYINT, 
+attendance_total INT, 
+attendance_average INT, 
+game_length_minutes_total INT, 
+game_length_minutes_average INT);

@@ -53,7 +53,6 @@ for row in cursor.fetchall():
                         row['visiting_line_score']))
 
 # load into database
-
 insert_query = """INSERT INTO  games_by_team_2024 (game_date, day_of_week, team, home_away, game_number, opponent, opponent_game_number, result, runs_scored, runs_allowed, total_outs, day_night, park_id, attendance, game_length_minutes, team_line_score, opponent_line_score) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) """
 cursor.executemany(insert_query, insert_list)
 connection.commit()

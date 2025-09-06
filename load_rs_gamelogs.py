@@ -139,12 +139,12 @@ Field(s)  Meaning
 Missing fields will be NULL.
 """
 
-sql = "INSERT INTO games_2024 (game_date, day_of_week, visiting_team, visiting_game_number, home_team, home_game_number, visiting_score, home_score, total_outs, day_night, park_id, attendance, game_length_minutes, visiting_line_score, home_line_score) VALUES"
+sql = "INSERT INTO games_2022 (game_date, day_of_week, visiting_team, visiting_game_number, home_team, home_game_number, visiting_score, home_score, total_outs, day_night, park_id, attendance, game_length_minutes, visiting_line_score, home_line_score) VALUES"
 
 # create the insert statement for games_2024 table
-insert_sql = "CREATE TABLE IF NOT EXISTS games_2024 (game_date TEXT, day_of_week TEXT, visiting_team TEXT, visiting_game_number INTEGER, home_team TEXT, home_game_number INTEGER, visiting_score INTEGER, home_score INTEGER, total_outs INTEGER, day_night TEXT, park_id TEXT, attendance INTEGER, game_length_minutes INTEGER, visiting_line_score TEXT, home_line_score TEXT);"
+insert_sql = "CREATE TABLE IF NOT EXISTS games_2023 (game_date TEXT, day_of_week TEXT, visiting_team TEXT, visiting_game_number INTEGER, home_team TEXT, home_game_number INTEGER, visiting_score INTEGER, home_score INTEGER, total_outs INTEGER, day_night TEXT, park_id TEXT, attendance INTEGER, game_length_minutes INTEGER, visiting_line_score TEXT, home_line_score TEXT);"
 
-with open('rawdata/gl2024.txt', newline='') as file:
+with open('rawdata/gl2022.txt', newline='') as file:
     reader = csv.reader(file)
     for row in reader:
         sql = sql + f" ('{row[0]}', '{row[2]}', '{row[3]}', {row[5]}, '{row[6]}', {row[8]}, {row[9]}, {row[10]}, {row[11]}, '{row[12]}', '{row[16]}', {row[17]}, {row[18]}, '{row[19]}', '{row[20]}'),"
